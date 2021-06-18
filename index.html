@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Место</title>
+  <link rel="stylesheet" href="./vendor/normalize.css">
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+    <div class="page__content">
+        <header class="header">
+            <img class="header__logo" src="image/header/logo.svg">
+        </header>
+        <section class="profile">   
+            <div class="profile__profile-info">
+                <img class="profile__avatar" src="image/profile/profile_avatar.jpg">
+                <div class="profile__profile-info_text">
+                    <h2 class="profile__profile-info_name">Жак-ив Кусто</h2>
+                    <img class="profile__profile-info_edit-button cursor" src="image/profile/edit-button.svg">
+                    <p class="profile__profile-info_desc">Исследователь океана</p>
+                </div> 
+            </div>
+            <img class="profile__add-button cursor">
+        </section>
+        <section class="elements">
+            <div class="element">
+                <img class="element__img" src="image/elements/karachaevsk.jpg">
+                <p class="element__name">Карачаевск</p>
+                <div class="element__like cursor"></div>
+            </div>
+            <div class="element">
+                <img class="element__img" src="image/elements/Elbrus-mount.jpg">
+                <p class="element__name">Гора Эльбрус</p>
+                <div class="element__like cursor"></div>
+            </div>
+            <div class="element">
+                <img class="element__img" src="image/elements/dombai.jpg">
+                <p class="element__name">Домбай</p>
+                <div class="element__like cursor"></div>
+            </div>
+            <div class="element">
+                <img class="element__img" src="image/elements/Elbrus-mount.jpg">
+                <p class="element__name">Гора Эльбрус</p>
+                <div class="element__like cursor"></div>
+            </div>
+            <div class="element">
+                <img class="element__img" src="image/elements/dombai.jpg">
+                <p class="element__name">Домбай</p>
+                <div class="element__like cursor"></div>
+            </div>
+            <div class="element">
+                <img class="element__img" src="image/elements/karachaevsk.jpg">
+                <p class="element__name">Карачаево-Черкеск</p>
+                <div class="element__like cursor"></div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2020 Mesto Russia</p>
+        </footer>
+        <section class="edit-form">
+            <img class="edit-form__close-icon" src="image/edit-form/close-Icon.png">
+            <div class="edit-form__form">
+                <h2 class="edit-form__title">Редактировать профиль</h2>
+                <input type="text" id="inp1" placeholder="Название" class="edit-form__name">
+                <input type="text" id="inp2" placeholder="Описание" class="edit-form__desc">
+                <button class="edit-form__submit cursor" type="submit">Сохранить</button>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </div>
+</body>

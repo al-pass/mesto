@@ -1,0 +1,15 @@
+.element__like{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-image:none;
+    width:22px;
+    height: 19px;
+    position:absolute;
+    bottom:31px;
+    right:21px;
+    background-image: url("../../../image/elements/like-disabled.png");
+}
+.element__like:hover{
+    opacity:0.6;
+}
