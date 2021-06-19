@@ -1,6 +1,7 @@
 @import url(../block/page/page.css);
 @import url(../block/page/__content/page__content.css);
 @import url(../block/cursor/cursor.css);
+@import url(../fonts/inter/Inter-Web/inter.css);
 /*Важные штуки*/
 @import url(../block/header/header.css);
 @import url(../block/header/__logo/header__logo.css);
@@ -9,10 +10,10 @@
 @import url(../block/profile/__add-button/profile__add-button.css);
 @import url(../block/profile/__avatar/profile__avatar.css);
 @import url(../block/profile/__profile-info/profile__profile-info.css);
-@import url(../block/profile/__profile-info/_desc/profile__profile-info_desc.css);
-@import url(../block/profile/__profile-info/_edit-button/profile__profile-info_edit-button.css);
-@import url(../block/profile/__profile-info/_name/profile__profile-info_name.css);
-@import url(../block/profile/__profile-info/_text/profile__profile-info_text.css);
+@import url(../block/profile/__profile-info-desc/profile__profile-info-desc.css);
+@import url(../block/profile/__profile-info-edit-button/profile__profile-info-edit-button.css);
+@import url(../block/profile/__profile-info-name/profile__profile-info-name.css);
+@import url(../block/profile/__profile-info-grid/profile__profile-info-grid.css);
 /*PROFILE*/
 @import url(../block/elements/elements.css);
 /*Elements*/

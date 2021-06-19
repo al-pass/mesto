@@ -4,10 +4,9 @@
     background-size: contain;
     border-image:none;
     width:22px;
-    height: 19px;
-    position:absolute;
-    bottom:31px;
-    right:21px;
+    justify-self:end;
+    margin-right:30px;
+    grid-area: 13/2/13/2;
     background-image: url("../../../image/elements/like-disabled.png");
 }
 .element__like:hover{
