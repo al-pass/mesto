@@ -1,0 +1,12 @@
+.edit-form__close-icon{
+    margin-top: 195px;
+    margin-bottom:5px;
+    max-width: 40px;
+    margin-left:465px;
+}
+@media screen and (max-width:600px){
+    .edit-form__close-icon{
+        margin-left:240px;
+        margin-bottom: 14px;
+    }
+}
