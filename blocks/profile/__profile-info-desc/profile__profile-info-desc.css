@@ -9,7 +9,7 @@
     text-overflow: ellipsis;
     max-width: 336px;
     overflow: hidden;
-    white-space: nowrap; 
+    white-space: nowrap;
     margin:16px 0 0;
     grid-area:desc;
 }
