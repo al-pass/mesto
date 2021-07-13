@@ -1,0 +1,8 @@
+.edit-form__input_desc{
+    margin-bottom: 48px;
+}
+@media screen  and (max-width:600px){
+    .edit-form__desc{
+        margin-bottom: 41px;
+    }
+}

@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Место</title>
-  <link rel="stylesheet" href="./vendor/normalize.css">
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
@@ -12,62 +11,64 @@
         <header class="header">
             <img class="header__logo" alt="Лого сайта Место Россия" src="image/header/logo.svg">
         </header>
-        <section class="profile">   
+        <main>
+            <section class="profile">   
             <div class="profile__profile-info">
                 <img class="profile__avatar" alt="Фотография Аватара" src="image/profile/profile_avatar.jpg">
                 <div class="profile__profile-info-grid">
-                    <h2 class="profile__profile-info-name">Жак-ив Кусто</h2>
-                    <img class="profile__profile-info-edit-button cursor" alt="Изменение описания профиля" src="image/profile/edit-button.svg">
+                    <h1 class="profile__profile-info-name">Жак-ив Кусто</h2>
+                    <button class="cursor button" type="type"><img class="profile__profile-info-edit-button cursor" alt="Изменение описания профиля" src="image/profile/edit-button.svg"></button>
                     <p class="profile__profile-info-desc">Исследователь океана</p>
                 </div> 
             </div>
-            <div class="profile__add-button cursor"></div>
-        </section>
-        <section class="elements">
-            <div class="element">
-                <img class="element__img" alt="Фотография карточки" src="image/elements/karachaevsk.jpg">
-                <p class="element__name">Карачаевск</p>
+            <button class="button" type="type"><img src="./image/profile/add-button.svg" width="22" height="22" class="profile__add-button cursor"></button>
+            </section>
+            <section class="elements">
+            <article class="element">
+                <img class="element__img" alt="Старый храм в окружении гор" src="image/elements/karachaevsk.jpg">
+                <h2 class="element__name">Карачаевск</p>
                 <div class="element__like cursor"></div>
-            </div>
-            <div class="element">
-                <img class="element__img" alt="Фотография карточки" src="image/elements/Elbrus-mount.jpg">
+            </article>
+            <article class="element">
+                <img class="element__img" alt="Еле заметная гора эльбрус в отдалении во время рассвета" src="image/elements/Elbrus-mount.jpg">
+                <h2 class="element__name">Гора Эльбрус</p>
+                <div class="element__like cursor"></div>
+            </article>
+            <article class="element">
+                <img class="element__img" alt="Острый снежный пик" src="image/elements/dombai.jpg">
+                <h2 class="element__name">Домбай</p>
+                <div class="element__like cursor"></div>
+            </article>
+            <article class="element">
+                <img class="element__img" alt="Еле заметная гора эльбрус в отдалении во время рассвета" src="image/elements/Elbrus-mount.jpg">
                 <p class="element__name">Гора Эльбрус</p>
                 <div class="element__like cursor"></div>
-            </div>
-            <div class="element">
-                <img class="element__img" alt="Фотография карточки" src="image/elements/dombai.jpg">
+            </article>
+            <article class="element">
+                <img class="element__img" alt="Острый снежный пик" src="image/elements/dombai.jpg">
                 <p class="element__name">Домбай</p>
                 <div class="element__like cursor"></div>
-            </div>
-            <div class="element">
-                <img class="element__img" alt="Фотография карточки" src="image/elements/Elbrus-mount.jpg">
-                <p class="element__name">Гора Эльбрус</p>
-                <div class="element__like cursor"></div>
-            </div>
-            <div class="element">
-                <img class="element__img" alt="Фотография карточки" src="image/elements/dombai.jpg">
-                <p class="element__name">Домбай</p>
-                <div class="element__like cursor"></div>
-            </div>
-            <div class="element">
-                <img class="element__img" alt="Фотография карточки" src="image/elements/karachaevsk.jpg">
+            </article>
+            <article class="element">
+                <img class="element__img" alt="Старый храм в окружении гор" src="image/elements/karachaevsk.jpg">
                 <p class="element__name">Карачаево-Черкеск</p>
                 <div class="element__like cursor"></div>
-            </div>
-        </section>
-        <footer class="footer">
+            </article>
+            </section>
+            <footer class="footer">
             <p class="footer__text">&copy; 2020 Mesto Russia</p>
-        </footer>
-        <section class="edit-form">
-            <img class="edit-form__close-icon" alt="Иконка закрытия формы" src="image/edit-form/close-Icon.png">
-            <div class="edit-form__form">
+            </footer>
+            <section class="edit-form">
+                <button class="button" type="type"> <img class="edit-form__close-icon cursor" alt="Иконка закрытия формы" src="image/edit-form/close-Icon.svg"></button>
+                <div class="edit-form__container">
                 <h2 class="edit-form__title">Редактировать профиль</h2>
-                <input type="text" id="inp1" placeholder="Название" class="edit-form__name">
-                <input type="text" id="inp2" placeholder="Описание" class="edit-form__desc">
+                <form type="name"><input type="name" id="inp-name" placeholder="Название" class="edit-form__input edit-form__input_name"></form>
+                <form type="name"><input type="name" id="inp-desc" placeholder="Описание" class="edit-form__input edit-form__input_desc"></form>
                 <button class="edit-form__submit cursor" type="submit">Сохранить</button>
-            </div>
-        </section>
-        <script src="script.js"></script>
-    </div>
+               </div>
+            </section> 
+        </main>
+    </div> 
+    <script src="script.js"></script>     
 </body>
 </html>

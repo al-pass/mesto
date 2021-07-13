@@ -1,5 +1,5 @@
-let names = document.querySelector('.edit-form__name');
-let desc = document.querySelector('.edit-form__desc');
+let names = document.querySelector('.edit-form__input_name');
+let desc = document.querySelector('.edit-form__input_desc');
 let submitBut = document.querySelector ('.edit-form__submit');
 let exisName = document.querySelector('.profile__profile-info-name');
 let exisDesc = document.querySelector('.profile__profile-info-desc');
@@ -13,7 +13,7 @@ function changeInfo(){
 };
 
 submitBut.onclick = changeInfo;
-
+//функия отвечающая за изменение текста в профиле
 
 
 let closeIcon = document.querySelector('.edit-form__close-icon');
@@ -28,7 +28,7 @@ function togglePopup() {
         desc.value=exisDesc.textContent;
 }
 };
- 
+//фуркция отвечающая за закрытие и открытие попапа на изменения данных в профиле. 
 editIcon.onclick = togglePopup;
 closeIcon.onclick = togglePopup;
 
