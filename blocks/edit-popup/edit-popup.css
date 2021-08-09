@@ -1,6 +1,6 @@
 .edit-popup {
     z-index: 3;
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;

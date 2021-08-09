@@ -40,6 +40,7 @@
 /*Footer*/
 
 @import url(../blocks/edit-popup/edit-popup.css);
+@import url(../blocks/edit-popup/_toggle/edit-popup_toggle.css);
 @import url(../blocks/edit-popup/__close-icon/edit-popup__close-icon.css);
 @import url(../blocks/edit-popup/__form/edit-popup__form.css);
 @import url(../blocks/edit-popup/_input/edit-popup_input.css);
