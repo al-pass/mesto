@@ -1,4 +1,4 @@
-.edit-popup_input_name {
+.edit-popup__input {
     font-family: "Inter", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -8,5 +8,5 @@
     width: 100%;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }

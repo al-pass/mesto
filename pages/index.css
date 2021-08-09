@@ -13,6 +13,7 @@
 
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
+@import url(../blocks/profile/__add-button-cross/profile__add-button-cross.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);
 @import url(../blocks/profile/__profile-info/profile__profile-info.css);
 @import url(../blocks/profile/__profile-info-desc/profile__profile-info-desc.css);
@@ -40,11 +41,9 @@
 /*Footer*/
 
 @import url(../blocks/edit-popup/edit-popup.css);
-@import url(../blocks/edit-popup/_toggle/edit-popup_toggle.css);
+@import url(../blocks/edit-popup/__toggle/edit-popup__toggle.css);
 @import url(../blocks/edit-popup/__close-icon/edit-popup__close-icon.css);
 @import url(../blocks/edit-popup/__form/edit-popup__form.css);
-@import url(../blocks/edit-popup/_input/edit-popup_input.css);
-@import url(../blocks/edit-popup/_input/_name/edit-popup_input_name.css);
-@import url(../blocks/edit-popup/_input/_desc/edit-popup_input_desc.css);
+@import url(../blocks/edit-popup/__input/edit-popup__input.css);
 @import url(../blocks/edit-popup/__submit/edit-popup__submit.css);
 @import url(../blocks/edit-popup/__title/edit-popup__title.css);

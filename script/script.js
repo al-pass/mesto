@@ -1,5 +1,5 @@
-let names = document.querySelector('.edit-popup_input_name');
-let desc = document.querySelector('.edit-popup_input_desc');
+let names = document.getElementById('inp-name');
+let desc = document.getElementById('inp-desc');
 let form = document.getElementById('form');
 let exisName = document.querySelector('.profile__profile-info-name');
 let exisDesc = document.querySelector('.profile__profile-info-desc');
@@ -22,12 +22,11 @@ form.addEventListener('submit', changeInfo);
 //функия отвечающая за изменение текста в профиле
 
 
-names.value = exisName.textContent;
-desc.value = exisDesc.textContent;
-
 function togglePopup() {
-    popup.classList.toggle('edit-popup_toggle');
+    popup.classList.toggle('edit-popup__toggle');
+    names.value = exisName.textContent;
+    desc.value = exisDesc.textContent;
 };
 //фуркция отвечающая за закрытие и открытие попапа на изменения данных в профиле. 
-editIcon.addEventListener("click",togglePopup);
-closeIcon.addEventListener("click",togglePopup);
+editIcon.addEventListener("click", togglePopup);
+closeIcon.addEventListener("click", togglePopup);
