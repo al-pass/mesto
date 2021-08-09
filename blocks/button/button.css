@@ -1,0 +1,6 @@
+.button{
+    border:none;
+    padding:0;
+    background: transparent;
+    cursor: url('../../image/cursor.png') 10 -2, pointer;
+}

@@ -1,0 +1,14 @@
+.edit-popup__close-icon{
+    margin-bottom:5px;
+    max-width: 40px;
+    padding-left:450px;
+    background-size: cover;
+    align-self:center;
+}
+@media screen and (max-width:600px){
+    .edit-popup__close-icon{
+        padding-left:240px;
+        margin-bottom: 14px;
+        max-width: 24px;
+    }
+}
