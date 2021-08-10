@@ -1,0 +1,15 @@
+.edit-popup__close-icon {
+    position: absolute;
+    right: -50px;
+    top: -55px;
+    background-size: cover;
+    align-self: center;
+}
+
+@media screen and (max-width:600px) {
+    .edit-popup__close-icon {
+        max-width: 24px;
+        right: 0px;
+        top: -35px;
+    }
+}

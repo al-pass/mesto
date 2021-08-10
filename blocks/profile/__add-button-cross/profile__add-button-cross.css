@@ -1,0 +1,11 @@
+    .profile__add-button-cross {
+        width: 22px;
+        align-self: center;
+    }
+    
+    @media screen and (max-width:700px) {
+        .profile__add-button-cross {
+            width: 16px;
+            align-self: center;
+        }
+    }

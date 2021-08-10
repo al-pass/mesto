@@ -1,0 +1,20 @@
+.element__name{ 
+    font-family: "Inter", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #000000;
+
+    margin:0;
+    margin-left:21px;
+    padding:0;
+    width:60%;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width:246px;
+    grid-area:12/1/12/3;
+}

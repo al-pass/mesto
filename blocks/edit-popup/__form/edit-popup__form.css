@@ -1,0 +1,22 @@
+.edit-popup__form {
+    position: relative;
+    border-radius: 2%;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 430px;
+    background-color: white;
+    display: flex;
+    padding: 34px 36px 37px;
+    flex-direction: column;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width:600px) {
+    .edit-popup__form {
+        max-width: 282px;
+        padding: 25px 22px;
+    }
+}
+
+
+/*боюсь я не понимаю что значи просто контейнер. Это форма в которой находится куча элементов. Что вы имете в виду?*/

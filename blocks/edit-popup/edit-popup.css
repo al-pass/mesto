@@ -1,0 +1,16 @@
+.edit-popup {
+    z-index: 3;
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Вы имете в виду подобное название? Потому что в макете попап находится в папке эдит форм. Как именно должно выглядеть название?*/

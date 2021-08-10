@@ -1,0 +1,7 @@
+.element__img{
+    border-radius: 5%;
+    border-bottom: #FFFFFF 79px solid;
+    max-width: 282px;
+    grid-area: 1/ 1/ 14/ 3;
+    object-fit: cover;
+}
