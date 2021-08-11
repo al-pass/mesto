@@ -6,6 +6,10 @@
     align-self: center;
 }
 
+.edit-popup__close-icon:hover{
+    opacity: 0.6;
+}
+
 @media screen and (max-width:600px) {
     .edit-popup__close-icon {
         max-width: 24px;
