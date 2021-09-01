@@ -1,4 +1,4 @@
-.edit-popup__form {
+.add-card-popup__form {
     transition: 1s, ease;
     position: relative;
     border-radius: 2%;
@@ -13,7 +13,7 @@
 }
 
 @media screen and (max-width:600px) {
-    .edit-popup__form {
+    .add-card-popup__form {
         max-width: 282px;
         padding: 25px 22px;
     }

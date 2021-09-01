@@ -1,6 +1,9 @@
 .edit-popup {
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s ease;
+    display: flex;
     z-index: 3;
-    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -14,3 +17,151 @@
 
 
 /*Вы имете в виду подобное название? Потому что в макете попап находится в папке эдит форм. Как именно должно выглядеть название?*/
+
+
+/*let editNamePopupTemplate = document.querySelector('#edit-name-popup').content;
+let main = document.querySelector('#main');
+let editNamePopupCreate = editNamePopupTemplate.querySelector('.edit-popup').cloneNode(true);
+editNamePopupCreate.querySelector ('.edit-popup__title').textContent = "Редактировать профиль";
+editNamePopupCreate.querySelector ('.edit-popup__submit').textContent = "Сохранить";
+main.append(editNamePopupCreate);
+//Создание эдит попапа
+let addCardPopupTemplate = document.querySelector('#add-card-popup').content;
+let addCardPopupCreate = addCardPopupTemplate.querySelector('.add-card-popup').cloneNode(true);
+addCardPopupCreate.querySelector ('.add-card-popup__title').textContent = "Новое место";
+addCardPopupCreate.querySelector ('.add-card-popup__submit').textContent = "Сохранить";
+main.append(addCardPopupCreate);
+//Создание попапа создания карточки*/
+/*let addCardtemplate = document.querySelector('#add-card').content;
+let cardElemens = document.querySelector('.elements')*/
+//main.append(addCardCreate);
+
+//Создание карточки
+let editNamePopup = document.querySelector('.edit-popup')
+let editName = document.getElementById('inp-name');
+let editDesc = document.getElementById('inp-desc');
+let exisName = document.querySelector('.profile__profile-info-name');
+let exisDesc = document.querySelector('.profile__profile-info-desc');
+let editNameCloseIcon = document.querySelector('.edit-popup__close-icon');
+let editNameOpenIcon = document.querySelector('.profile__profile-info-edit-button');
+let editNameForm = document.querySelector('#form');
+//Переменные необходимые для работы с попапоп редактирующим имя
+/*let addCardPopup = document.querySelector('.add-card-popup')
+let addCardCloseIcon = document.querySelector('.add-card-popup__close-icon');
+let addCardOpenIcon = document.querySelector('.profile__add-button');
+let addCardForm = document.getElementById('form');
+let addCardName = document.getElementById('inp-card-name');
+let addCardLink = document.getElementById('inp-card-link');*/
+//Переменные нобходимые для работы с попапом добавляющим карточки
+let likes = document.querySelectorAll(".element__like");
+// likes in cards
+/*const initialCards = [
+    {
+      name: 'Архыз',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+      name: 'Челябинская область',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+      name: 'Иваново',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+      name: 'Камчатка',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+      name: 'Холмогорский район',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+      name: 'Байкал',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+  ]; */
+function changeNameInfo(evt) {
+    return () => {
+    evt.preventDefault();
+    exisName.textContent = editName.value;
+    exisDesc.textContent = editDesc.value;
+    names.value = "";
+    desc.value = "";
+    closePopup(editNamePopup);}
+};
+
+function openPopup(popupType, ... text) {
+  return () =>{
+    console.log('open popup')
+    popupType.classList.add('active');
+    for ( let i  = 1; i <= text.length; i+=2) {   
+            text[i-1].value = text[i].textContent;}     
+}
+};
+
+function closePopup(popupType){
+    return () => {
+    popupType.classList.remove('active');
+}
+}
+// Такой метод предотвращения вызова функиции называется, методом каррирования, но я несколько не понимаю механизм несмотря на то, что прочитал множество статей на этот счет. Могли бы вы в 2 словах описать почему дополнительная оболочка предотвращает вызов функции.
+/*function addFirstSixCards(initialCards) {
+      initialCards.forEach((item) => {
+        addCardCreate = addCardtemplate.querySelector('.element').cloneNode(true);
+    addCardCreate.querySelector(".element__img").src = `${item.link}`;
+    addCardCreate.querySelector(".element__img").alt= "Фотография " + `${item.name}`;
+    addCardCreate.querySelector(".element__name").textContent = `${item.name}`;
+    cardElemens.append(addCardCreate);
+    addCardCreate.querySelector('.element__like').addEventListener('click', (evt)=>{
+      console.log('aaa')
+      const eventTarget = evt.target;
+      eventTarget.classList.toggle('element__like_active');
+    });
+    addCardCreate.querySelector('.element__trashbox').addEventListener('click', (evt)=>{
+      console.log('bbb')
+      const eventTarget = evt.target;
+      const deleteCard = eventTarget.closest('.element');
+      deleteCard.remove();
+    });
+      })
+}
+
+addFirstSixCards(initialCards);*/
+
+
+/*function addCard (evt){
+  return () => {
+    console.log("1");
+    evt.preventDefault();
+    addCardCreate = addCardtemplate.querySelector('.element').cloneNode(true);
+    addCardCreate.querySelector(".element__img").src = `${addCardLink}`;
+    addCardCreate.querySelector(".element__img").alt= "Фотография " + `${addCardName}`;
+    addCardCreate.querySelector(".element__name").textContent = `${addCardName}`;
+    cardElemens.append(addCardCreate);
+    addCardCreate.querySelector('.element__like').addEventListener('click', ()=>{
+      console.log('aaa')
+      evt.target.classList.toggle('element__like_active');
+    });
+    const exisCards = initialCards.append({
+      name: `${addCardName}`,
+      link: `${addCardLink}`
+    });
+    
+    console.log("11");}
+}; */
+
+//function removeCard {
+// .closest
+// .remove 
+//}
+
+editNameOpenIcon.addEventListener ("click", openPopup(editNamePopup, editName, exisName,editDesc, exisDesc));
+//(элемент на который необходимо нажать).addEventListener ("click", openPopup((необходимый попап), (поле в которое нужно заполнить информацию), (информация которую нужно заполнить) ((ограничения на количество полей нет)));
+editNameCloseIcon.addEventListener ("click", closePopup(editNamePopup));
+editNameForm.addEventListener("submit", changeNameInfo);
+//функия отвечающая за изменение текста в профиле
+
+/*addCardOpenIcon.addEventListener ("click", openPopup(addCardPopup));
+addCardCloseIcon.addEventListener ("click", closePopup(addCardPopup));*/
+//addCardForm.addEventListener ('submit', addCard);
