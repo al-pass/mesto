@@ -13,7 +13,7 @@
         <header class="header">
             <img class="header__logo" alt="Лого сайта Место Россия" src="image/header/logo.svg">
         </header>
-        <main>
+        <main id="main">
             <section class="profile">
                 <div class="profile__profile-info">
                     <img class="profile__avatar" alt="Фотография Аватара" src="image/profile/profile_avatar.jpg">
@@ -28,55 +28,59 @@
                         src="./image/profile/add-button.svg" alt="Кнопка добавление карточки"></button>
             </section>
             <section class="elements">
-                <article class="element">
-                    <img class="element__img" alt="Старый храм в окружении гор" src="image/elements/karachaevsk.jpg">
-                    <h2 class="element__name">Карачаевск</h2>
-                    <button class="element__like button" type="button"></button>
-                </article>
-                <article class="element">
-                    <img class="element__img" alt="Еле заметная гора эльбрус в отдалении во время рассвета" src="image/elements/Elbrus-mount.jpg">
-                    <h2 class="element__name">Гора Эльбрус</h2>
-                    <button class="element__like button" type="button"></button>
-                </article>
-                <article class="element">
-                    <img class="element__img" alt="Острый снежный пик" src="image/elements/dombai.jpg">
-                    <h2 class="element__name">Домбай</h2>
-                    <button class="element__like button" type="button"></button>
-                </article>
-                <article class="element">
-                    <img class="element__img" alt="Еле заметная гора эльбрус в отдалении во время рассвета" src="image/elements/Elbrus-mount.jpg">
-                    <h2 class="element__name">Гора Эльбрус</h2>
-                    <button class="element__like button" type="button"></button>
-                </article>
-                <article class="element">
-                    <img class="element__img" alt="Острый снежный пик" src="image/elements/dombai.jpg">
-                    <h2 class="element__name">Домбай</h2>
-                    <button class="element__like button" type="button"></button>
-                </article>
-                <article class="element">
-                    <img class="element__img" alt="Старый храм в окружении гор" src="image/elements/karachaevsk.jpg">
-                    <h2 class="element__name">Карачаево-Черкеск</h2>
-                    <button class="element__like button" type="button"></button>
-                </article>
-            </section>
-            <section class="edit-popup">
-                <div class="edit-popup__form">
-                    <button class="button" type="button"> <img class="edit-popup__close-icon"
-                            alt="Иконка закрытия формы" src="image/edit-form/close-Icon.svg"></button>
-                    <h2 class="edit-popup__title">Редактировать профиль</h2>
-                    <form name="edit-popup" id="form">
-                        <input type="text" name="edit-popup-name" id="inp-name" placeholder="Название" class="edit-popup__input">
-                        <input type="text" name="edit-popup-desc" id="inp-desc" placeholder="Описание" class="edit-popup__input">
-                        <button class="edit-popup__submit button" type="submit">Сохранить</button>
-                    </form>
-                </div>
             </section>
         </main>
         <footer class="footer">
             <p class="footer__text">&copy; 2020 Mesto Russia</p>
         </footer>
     </div>
+    <section class="edit-popup bg">
+        <div class="edit-popup__form form">
+            <button class="button" type="button"> <img class="edit-popup__close-icon" alt="Иконка закрытия формы"
+                    src="image/edit-form/close-Icon.svg"></button>
+            <h2 class="edit-popup__title">Редактировать профиль</h2>
+            <form name="edit-popup active" id="edit-name-form">
+                <input type="text" name="edit-popup-name" id="inp-name" placeholder="Название" class="edit-popup__input input" minlength="7" maxlength="40" required>
+                <span class="inp-name-error error-messages"></span>
+                <input type="text" name="edit-popup-desc" id="inp-desc" placeholder="Описание" class="edit-popup__input input" minlength="2" maxlength="200" required>
+                <span class="inp-desc-error error-messages"></span>
+                <button class="edit-popup__submit form__submit button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </section>
+    <section class="add-card-popup bg">
+        <div class="add-card-popup__form form">
+            <button class="button" type="button"> <img class="add-card-popup__close-icon" alt="Иконка закрытия формы"
+                    src="image/edit-form/close-Icon.svg"></button>
+            <h2 class="add-card-popup__title">Новое место</h2>
+            <form name="add-card-popup active" id="add-card-form">
+                <input type="text" name="add-card-popup-name" id="inp-card-name" placeholder="Название" minlength="2" maxlength="30" required class="add-card-popup__input input">
+                <span class="inp-card-name-error error-messages"></span>
+                <input type="url" name="add-card-popup-desc" id="inp-card-link" placeholder="Cсылка на картинку" required class="add-card-popup__input input">
+                <span class="inp-card-link-error error-messages"></span>
+                <button class="add-card-popup__submit form__submit button" type="submit">Создать</button>
+            </form>
+        </div>
+    </section>
+    <div class="huge-img bg">
+        <div class='huge-img__container'>
+            <button class="button" type="button"> <img class="huge-img__close-icon" alt="Иконка закрытия формы"
+                    src="image/edit-form/close-Icon.svg"></button>
+            <img class="huge-img__img" alt="#" src="image/edit-form/close-Icon.svg">
+            <h2 class="huge-img__name">dd</h2>
+        </div>
+    </div>
+    <template id="add-card">
+        <article class="element">
+            <img class="element__img" alt="#" src="#">
+            <img class="element__trashbox button" alt="Удалить" src='./image/elements/trashbox.svg'>
+            <h2 class="element__name"></h2>
+            <button class="element__like button" type="button"></button>
+        </article>
+    </template>
+    <script src="./script/validation.js"></script>
     <script src="./script/script.js"></script>
+
 </body>
 
 </html>

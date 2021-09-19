@@ -1,3 +1,20 @@
+@keyframes pulse {
+    0% {
+     transform: scale(1, 1);
+    }
+
+    50% {
+     transform: scale(1.1, 1.1);
+    }
+
+    100% {
+    transform: scale(1, 1);
+    }
+}
+
 .element__like_active{
     background-image: url("../../../../image/elements/like-active.svg");
+    transition: 0.3s;
+    animation: pulse 0.2s ease-out;
+
 }

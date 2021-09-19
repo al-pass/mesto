@@ -3,6 +3,7 @@
 @import url(../blocks/page/page.css);
 @import url(../blocks/page/__content/page__content.css);
 @import url(../blocks/button/button.css);
+@import url(../blocks/input/input.css);
 
 /*Важные штуки*/
 
@@ -41,9 +42,34 @@
 /*Footer*/
 
 @import url(../blocks/edit-popup/edit-popup.css);
-@import url(../blocks/edit-popup/__toggle/edit-popup__toggle.css);
 @import url(../blocks/edit-popup/__close-icon/edit-popup__close-icon.css);
 @import url(../blocks/edit-popup/__form/edit-popup__form.css);
 @import url(../blocks/edit-popup/__input/edit-popup__input.css);
 @import url(../blocks/edit-popup/__submit/edit-popup__submit.css);
 @import url(../blocks/edit-popup/__title/edit-popup__title.css);
+
+/*Блоки попапа изменения имени*/
+
+@import url(../blocks/add-card-popup/add-card-popup.css);
+@import url(../blocks/add-card-popup/__close-icon/add-card-popup__close-icon.css);
+@import url(../blocks/add-card-popup/__form/add-card-popup__form.css);
+@import url(../blocks/add-card-popup/__input/add-card-popup__input.css);
+@import url(../blocks/add-card-popup/__submit/add-card-popup__submit.css);
+@import url(../blocks/add-card-popup/__title/add-card-popup__title.css);
+
+/*Блоки попапа добавления карточки*/
+
+@import url(../blocks/huge-img/huge-img.css);
+@import url(../blocks/huge-img/__name/huge-img__name.css);
+@import url(../blocks/huge-img/__img/huge-img__img.css);
+@import url(../blocks/huge-img/__container/huge-img__container.css);
+@import url(../blocks/huge-img/__close-icon/huge-img__close-icon.css);
+
+/*Блоки попапа увеличенной картинки*/
+
+@import url(../blocks/active/active.css);
+@import url(../blocks/button_inactive/button_inactive.css);
+
+/*Статус активности попапов*/
+
+@import url(../blocks/error-messages/error-message.css);

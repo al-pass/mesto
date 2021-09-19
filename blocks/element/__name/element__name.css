@@ -17,4 +17,5 @@
     overflow: hidden;
     max-width:246px;
     grid-area:12/1/12/3;
+    z-index:2;
 }

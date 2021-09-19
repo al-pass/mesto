@@ -1,4 +1,4 @@
-.edit-popup__submit{
+.add-card-popup__submit{
     font-family: "Inter", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -15,15 +15,12 @@
     border-radius: 2px;
     background-color: #000;
 }
-
-.edit-popup__submit:hover{
+.add-card-popup__submit:hover{
     opacity: 0.8;
 }
-
 @media screen and (max-width:600px){
-    .edit-popup__submit{
+    .add-card-popup__submit{
         max-width:238px;
         font-size: 14px;
-        line-height: 17px;
-    }
+        line-height: 17px;}
 }
