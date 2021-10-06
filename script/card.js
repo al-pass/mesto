@@ -86,4 +86,4 @@
      };
      export { renderInitialCards, Card };
 
- })();
+ }());
