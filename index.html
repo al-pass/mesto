@@ -36,7 +36,7 @@
     </div>
     <section class="edit-popup bg">
         <div class="edit-popup__form form">
-            <button class="button" type="button"> <img class="edit-popup__close-icon" alt="Иконка закрытия формы"
+            <button class="button" type="button"> <img class="edit-popup__close-icon close-icon" alt="Иконка закрытия формы"
                     src="image/edit-form/close-Icon.svg"></button>
             <h2 class="edit-popup__title">Редактировать профиль</h2>
             <form name="edit-popup active" id="edit-name-form">
@@ -50,7 +50,7 @@
     </section>
     <section class="add-card-popup bg">
         <div class="add-card-popup__form form">
-            <button class="button" type="button"> <img class="add-card-popup__close-icon" alt="Иконка закрытия формы"
+            <button class="button" type="button"> <img class="add-card-popup__close-icon close-icon " alt="Иконка закрытия формы"
                     src="image/edit-form/close-Icon.svg"></button>
             <h2 class="add-card-popup__title">Новое место</h2>
             <form name="add-card-popup active" id="add-card-form">
@@ -64,7 +64,7 @@
     </section>
     <div class="huge-img bg">
         <div class='huge-img__container'>
-            <button class="button" type="button"> <img class="huge-img__close-icon" alt="Иконка закрытия формы"
+            <button class="button" type="button"> <img class="huge-img__close-icon close-icon" alt="Иконка закрытия формы"
                     src="image/edit-form/close-Icon.svg"></button>
             <img class="huge-img__img" alt="#" src="image/edit-form/close-Icon.svg">
             <h2 class="huge-img__name">dd</h2>
@@ -72,15 +72,14 @@
     </div>
     <template id="add-card">
         <article class="element">
-            <img class="element__img" alt="#" src="#">
+            <img class="element__img button" alt="#" src="#">
             <img class="element__trashbox button" alt="Удалить" src='./image/elements/trashbox.svg'>
             <h2 class="element__name"></h2>
             <button class="element__like button" type="button"></button>
         </article>
     </template>
-    <script src="./script/validation.js"></script>
-    <script src="./script/script.js"></script>
 
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
