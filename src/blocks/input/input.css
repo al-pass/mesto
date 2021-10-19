@@ -1,0 +1,11 @@
+.input:hover {
+    border-bottom-color: #000;
+}
+
+.input:focus {
+    border-bottom-color: #007DFF;
+}
+
+input:invalid {
+    border-bottom: 1px solid red;
+}

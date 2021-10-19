@@ -1,0 +1,11 @@
+.popup__container {
+    position: relative;
+    max-width: fit-content;
+    width: 85%;
+}
+
+@media screen and (max-width:320px) {
+    .popup__container {
+        max-width: 240px;
+    }
+}

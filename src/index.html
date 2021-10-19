@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Место</title>
+</head>
+
+<body class="page">
+    <div class="page__content">
+        <header class="header">
+            <img class="header__logo" alt="Лого сайта Место Россия" src="<%=require('./image/header/logo.svg')%>">
+        </header>
+        <main id="main">
+            <section class="profile">
+                <div class="profile__profile-info">
+                    <img class="profile__avatar" alt="Фотография Аватара" src="<%=require('./image/profile/profile_avatar.jpg')%>">
+                    <div class="profile__profile-info-grid">
+                        <h1 class="profile__profile-info-name">Жак-ив Кусто</h1>
+                        <button class="button" type="button"><img class="profile__profile-info-edit-button"
+                                alt="Изменение описания профиля" src="<%=require('./image/profile/edit-button.svg')%>"></button>
+                        <p class="profile__profile-info-desc">Исследователь океана</p>
+                    </div>
+                </div>
+                <button class="button profile__add-button" type="button"><img class="profile__add-button-cross"
+                        src="<%=require('./image/profile/add-button.svg')%>" alt="Кнопка добавление карточки"></button>
+            </section>
+            <section class="elements">
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2020 Mesto Russia</p>
+        </footer>
+    </div>
+    <section class="popup" id="edit-profile">
+        <div class="popup__main-frame form">
+            <button class="button" type="button"> <img class="popup__close-icon close-icon" alt="Иконка закрытия формы"
+                    src="<%=require('./image/edit-form/close-Icon.svg')%>"></button>
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form name="popup__form" id="edit-name-form">
+                <input type="text" name="edit-popup-name" id="inp-name" placeholder="Название" class="popup__input input" minlength="7" maxlength="40" required>
+                <span class="inp-name-error error-messages"></span>
+                <input type="text" name="edit-popup-desc" id="inp-desc" placeholder="Описание" class="popup__input input" minlength="2" maxlength="200" required>
+                <span class="inp-desc-error error-messages"></span>
+                <button class="popup__submit form__submit button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </section>
+    <section class="popup" id="add-card-popup">
+        <div class="popup__main-frame form">
+            <button class="button" type="button"> <img class="popup__close-icon close-icon " alt="Иконка закрытия формы"
+                    src="<%=require('./image/edit-form/close-Icon.svg')%>"></button>
+            <h2 class="popup__title">Новое место</h2>
+            <form name="popup__form" id="add-card-form">
+                <input type="text" name="add-card-popup-name" id="inp-card-name" placeholder="Название" minlength="2" maxlength="30" required class="popup__input input">
+                <span class="inp-card-name-error error-messages"></span>
+                <input type="url" name="add-card-popup-desc" id="inp-card-link" placeholder="Cсылка на картинку" required class="popup__input input">
+                <span class="inp-card-link-error error-messages"></span>
+                <button class="popup__submit form__submit button" type="submit">Создать</button>
+            </form>
+        </div>
+    </section>
+    <section class="popup" id="huge-img">
+        <div class='popup__container'>
+            <button class="button" type="button"> <img class="popup__close-icon popup__close-icon_adjusted  close-icon" alt="Иконка закрытия формы"
+                    src="<%=require('./image/edit-form/close-Icon.svg')%>"></button>
+            <img class="popup__img" alt="#" src="<%=require('./image/edit-form/close-Icon.svg')%>">
+            <h2 class="popup__name">dd</h2>
+        </div>
+    </section>
+    <template id="add-card">
+        <article class="element">
+            <img class="element__img button" alt="#" src="#">
+            <img class="element__trashbox button" alt="Удалить" src="<%=require('./image/elements/trashbox.svg')%>"">
+            <h2 class="element__name"></h2>
+            <button class="element__like button" type="button"></button>
+        </article>
+    </template>
+
+
+</body>
+
+</html>
