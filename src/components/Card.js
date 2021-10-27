@@ -13,6 +13,7 @@ class Card {
     };
 
     generateCard = (e) => {
+
         this._element = this._getTemplate();
         this._element.querySelector(".element__img").src = this._link;
 
@@ -27,15 +28,20 @@ class Card {
         this._handeCardClick(this._name, this._link);
 
     }
+    _toggleLike(evt) {
+        evt.target.classList.toggle('element__like_active');
+    }
+    _removeCard() {
+        this._element.remove();
+        this._element = null;
+    }
 
     _addEventListeners = (e) => {
-
         this._element.querySelector('.element__like').addEventListener('mousedown', (evt) => {
-            evt.target.classList.toggle('element__like_active');
+            this._toggleLike(evt)
         });
         this._element.querySelector('.element__trashbox').addEventListener('mousedown', (evt) => {
-            this._element.remove();
-            this._element = null;
+            this._removeCard()
         });
         this._element.querySelector(".element__img").addEventListener('mousedown', (evt) => {
             this._openPopupHandler();

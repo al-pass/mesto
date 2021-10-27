@@ -13,25 +13,53 @@ import {
     cardElements,
 } from '../utils/constants.js';
 import { initialCards } from '../utils/initial-cards.js';
-import { ValidationClass as validationClass } from '../components/Validation.js';
-import { Selector as selectorClass } from '../components/Selector.js'
-import { Card as cardClass } from '../components/Card.js';
-import { PopupWithImage as popupWithImageClass } from '../components/PopupWithImage.js';
-import { PopupWithForm as popupWithFormClass } from '../components/PopupWithForm.js';
-import { UserInfo as userInfoClass } from '../components/UserInfo.js';
+import { ValidationClass } from '../components/Validation.js';
+import { Section as SectionClass } from '../components/Section.js'
+import { Card as CardClass } from '../components/Card.js';
+import { PopupWithImage as PopupWithImageClass } from '../components/PopupWithImage.js';
+import { PopupWithForm as PopupWithFormClass } from '../components/PopupWithForm.js';
+import { UserInfo as UserInfoClass } from '../components/UserInfo.js';
 
-export const validationForEdditProfile = new validationClass(configValidationObj, editProfilePopup);
-export const validationForAddCard = new validationClass(configValidationObj, addCardPopup);
+export const validationForEdditProfile = new ValidationClass(configValidationObj, editProfilePopup);
+export const validationForAddCard = new ValidationClass(configValidationObj, addCardPopup);
 validationForEdditProfile.activateValidation();
 validationForAddCard.activateValidation();
 // activate validation
 
-const profileInfo = new userInfoClass({
+const profileInfo = new UserInfoClass({
     name: existingName,
     descriprion: existingDesc,
 });
 
-export const popupsWithFormEditProfile = new popupWithFormClass(editProfilePopup, (values, evt) => {
+const cardImgPopup = new PopupWithImageClass(hugeImg);
+cardImgPopup.setEventListeners();
+
+
+export const cardsList = new SectionClass({
+            data: initialCards,
+            renderer: (item) => {
+                cardsList.addItem(createCard(item, 'add-card'));
+            }
+        },
+        '.elements')
+    // section arguments: 1)object, where Data needs array of cards, Renderer is a 
+    //function which explains how to render cards. 2) blocke where cards will be rendered 
+cardsList.renderItems();
+
+
+// rendering card
+function createCard(item, cardForm) {
+    const newCard = new CardClass(item, cardForm, (name, link) => {
+        //card arguments are: 1) object with data and link. 2) type of card we need to make(form).
+        //3) function of huge img popup
+        cardImgPopup.open(name, link);
+    });
+    const cardElement = newCard.generateCard();
+    console.log(cardElement);
+    return cardElement;
+}
+
+export const popupsWithFormEditProfile = new PopupWithFormClass(editProfilePopup, (values, evt) => {
     evt.preventDefault();
     profileInfo.setUserInfo(values);
     popupsWithFormEditProfile.close();
@@ -48,9 +76,9 @@ editProfileOpenButton.addEventListener("click", () => {
 });
 // edit profile open listener
 
-export const popupsWithFormAddCard = new popupWithFormClass(addCardPopup, (values, evt) => {
+export const popupsWithFormAddCard = new PopupWithFormClass(addCardPopup, (values, evt) => {
     evt.preventDefault();
-    renderCard({ name: values[0], link: values[1] }, 'add-card');
+    cardsList.addItem(createCard({ name: values[0], link: values[1] }, 'add-card'));
     popupsWithFormAddCard.close();
 });
 // [0] and [1] in values means order in popup. In add Card 0 - name 1 - link
@@ -63,30 +91,3 @@ addCardOpenButton.addEventListener("click", () => {
 });
 // add card open listener
 //added reset validation because after closing form ( = reseting it in PopupWithForm.close(), should cause  reset error in span as well.)
-
-export function renderCard(element, cardSelector) {
-    const cardsList = new selectorClass({
-            data: element,
-            renderer: (item) => {
-                const newCard = new cardClass(item, cardSelector, (name, link) => {
-                    const cardImgPopup = new popupWithImageClass(name, link, hugeImg)
-                    cardImgPopup.open();
-                });
-                const cardElement = newCard.generateCard();
-
-                cardsList.addItem(cardElement);
-
-            }
-        },
-        cardElements)
-
-    cardsList.renderItem();
-}
-// rendering card
-function renderInitialCards() {
-    initialCards.forEach((item) => {
-        renderCard(item, 'add-card');
-    })
-}
-renderInitialCards();
-//render initial 6 cards

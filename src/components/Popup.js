@@ -3,15 +3,20 @@ export class Popup {
         this._popup = popupType;
     }
     open() {
+
         this._popup.classList.add('active');
+        document.addEventListener('keydown', this._handleEscClose)
     }
 
     close() {
         this._popup.classList.remove('active');
+        document.addEventListener('keydown', this._handleEscClose)
     }
 
-    _handleEscClose(evt) {
+    _handleEscClose = (evt) => {
+
         if (evt.key === 'Escape') {
+            console.log('evt.key')
             this.close();
         }
     }
@@ -29,8 +34,6 @@ export class Popup {
         this._popup.querySelector('.close-icon').addEventListener('mousedown', () => {
             this.close();
         })
-        document.addEventListener('keydown', (evt) => {
-            this._handleEscClose(evt)
-        })
+
     }
 }
