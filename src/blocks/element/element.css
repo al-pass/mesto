@@ -1,0 +1,13 @@
+.element {
+    position:relative;
+    justify-self: center;
+    max-width: max-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.element__trashbox{
+    position:absolute;
+    top: 18px;
+    right: 15px;
+    width: 18px;
+}
