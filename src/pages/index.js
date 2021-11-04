@@ -91,3 +91,12 @@ addCardOpenButton.addEventListener("click", () => {
 });
 // add card open listener
 //added reset validation because after closing form ( = reseting it in PopupWithForm.close(), should cause  reset error in span as well.)
+
+fetch('https://nomoreparties.co/v1/cohort-29/users/me ', {
+        headers: {
+            authorization: 'ccfde452-ebef-4dda-a84e-d1a61e032f57'
+        }
+    }),
+    then(res => {
+        console.log(res);
+    })
